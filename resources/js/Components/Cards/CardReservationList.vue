@@ -24,7 +24,7 @@
             <table class="items-center w-full bg-transparent border-collapse">
                 <thead>
                     <tr>
-                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
                             :class="[
                                 color === 'light'
                                     ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
@@ -32,7 +32,7 @@
                             ]">
                             User
                         </th>
-                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
                             :class="[
                                 color === 'light'
                                     ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
@@ -40,7 +40,7 @@
                             ]">
                             Driver
                         </th>
-                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
                             :class="[
                                 color === 'light'
                                     ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
@@ -48,7 +48,7 @@
                             ]">
                             Vehicle
                         </th>
-                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
                             :class="[
                                 color === 'light'
                                     ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
@@ -56,7 +56,7 @@
                             ]">
                             Status
                         </th>
-                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
                             :class="[
                                 color === 'light'
                                     ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
@@ -64,7 +64,7 @@
                             ]">
                             Approval 1
                         </th>
-                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
                             :class="[
                                 color === 'light'
                                     ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
@@ -72,7 +72,7 @@
                             ]">
                             Approval 2
                         </th>
-                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
                             :class="[
                                 color === 'light'
                                     ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
@@ -80,7 +80,7 @@
                             ]">
                             Reservation Date
                         </th>
-                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+                        <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
                             :class="[
                                 color === 'light'
                                     ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
@@ -92,17 +92,20 @@
                 </thead>
                 <tbody>
                     <tr v-for="reservation in reservations">
-                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-center">
                             {{ reservation.user.name }}
                         </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                        <td
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-center">
                             {{ reservation.driver.name }}
                         </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                        <td
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-center">
                             {{ reservation.vehicle.name }}
                         </td>
                         <td
-                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 uppercase">
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 uppercase text-center">
                             {{ reservation.status }}
                         </td>
                         <td
@@ -129,10 +132,12 @@
                                 ❌
                             </div>
                         </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                        <td
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-center">
                             {{ reservation.reservation_date }}
                         </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                        <td
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-center">
                             <form :action="route('reservation.done')" method="post" v-if="reservation.is_done == null">
                                 <input type="hidden" name="_token" :value="csrf">
                                 <input type="hidden" name="id" :value="reservation.id">

@@ -88,7 +88,7 @@
                     <ul class="md:flex-col md:min-w-full flex flex-col list-none">
                         <li class="items-center">
                             <a href="dashboard" @click="navigate" class="text-xs uppercase py-3 font-bold block" :class="[
-                                route().current('dashboard')
+                                route().current('dashboard.index')
                                     ? 'text-emerald-500 hover:text-emerald-600'
                                     : 'text-blueGray-700 hover:text-blueGray-500',
                             ]">

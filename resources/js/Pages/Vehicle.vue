@@ -1,5 +1,5 @@
 <template>
-    <Head title="Reservation" />
+    <Head title="Vehicles" />
     <Main>
         <div class="flex flex-wrap">
             <div class="w-full lg:w-full px-4">
