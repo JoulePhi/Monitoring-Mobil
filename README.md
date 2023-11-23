@@ -1,66 +1,86 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Aplikasi montitoring kendaraan
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Technologies :
 
-## About Laravel
+-   Laravel 10
+-   Vue Js 3
+-   Inertia Js
+-   Tailwind CSS
+-   MySQL 8.1
+-   PHP 8.1
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Users:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Admin :
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   email: admin@mail.com
+-   pass : bandung
 
-## Learning Laravel
+Atasan / Approval :
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   email: atasan1@mail.com pass: bandung
+-   email: atasan2@mail.com pass: bandung
+-   email: atasan3@mail.com pass: bandung
+-   email: atasan4@mail.com pass: bandung
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# Instalasi
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. clone repository ini
+2. jalankan composer install / composer update
+3. buat .env file yang isinya diambil dari .env.example dan sesuaikan
+4. sesuaikan nama database dan user di .env
+5. import file test_sekawan.sql ke database
+6. jalankan php artisan key:generate
+7. jalankan npm i
+8. jalankan npm run dev
+9. jalankan php artisan serve
+10. Buka di browser
+11. done
 
-## Laravel Sponsors
+## Cara penggunaan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1.  Login menggunakan akun users, bisa sebagai admin atau sebagai atasan/approvals
+    ![Login](https://firebasestorage.googleapis.com/v0/b/itsmejoule.appspot.com/o/sekawan%2FLogin%20-%20Laravel.png?alt=media&token=108e6e55-8921-4c1a-a2fe-39b320f6aa7c)
 
-### Premium Partners
+2.  Jika login sebagai admin maka sidebar akan menampilkan menu "Reservation"
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+![Reservation](https://firebasestorage.googleapis.com/v0/b/itsmejoule.appspot.com/o/sekawan%2FReservation%20-%20Laravel.png?alt=media&token=12e377bc-e007-4bba-b023-5c9c1380edcd)
 
-## Contributing
+Di menu ini admin adapat memesankan kendaraan dengan cara:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Pilih user yang mau memesan kendaraan
+2. Pilih kendaraan yang akan dipesan, (Jika kendaraan sudah dipesan user lain, maka kendaraan tidak bisa di pakai lagi hingga pesanan selesai)
+3. Pilih driver(Jika driver sudah dipesan user lain, maka driver tidak bisa di pakai lagi hingga pesanan selesai)
+4. Pilih pihak yang akan menyetujui peminjaman, penyetuju tidak bisa sama
+5. Klik "Reserve"
 
-## Code of Conduct
+6. Jika berhasil maka list pemesanan berada di bawah
+   ![Reservation](<https://firebasestorage.googleapis.com/v0/b/itsmejoule.appspot.com/o/sekawan%2FReservation%20-%20Laravel%20(1).png?alt=media&token=347b5306-a034-4692-b67d-b5a00e66f20b>)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+7. Di list pemesanan ini admin dapat melihat detail dari pemesanan yang sudah dibuat, selain itu jika pemesanan sudah selesai admin dapat mengklik button done, kemudian mobil dan driver yang tadi dipesan sudah dapat di pesan lagi.
 
-## Security Vulnerabilities
+8. Admin juga dapat mengeksport laporan periodik pemesanan dalam bentuk excel file di list pemesanan ini dengan mengklik tombol eksport
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+9. Status peminjaman akan berstatus "APPROVED" apabila 2 pihak penyetuju sudah menyetujui
 
-## License
+10. Jika login sebagai atasan/approval maka sidebar akan menampilkan menu "Approval"
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![Setuju](https://firebasestorage.googleapis.com/v0/b/itsmejoule.appspot.com/o/sekawan%2FReservation%20-%20Laravel%20approved.png?alt=media&token=2d2ab629-8640-405f-b378-299f208ebd66)
+
+![Menolak](https://firebasestorage.googleapis.com/v0/b/itsmejoule.appspot.com/o/sekawan%2FReservation%20-%20Laravel%20rejected.png?alt=media&token=f0183d55-cd27-496c-b673-f8d55dcd3603)
+
+11. Di menu ini pihak penyetuju dapat menentukan apakah setuju dengan pemesanan ataupun menolak
+
+12. Menu dashboard bisa diakses oleh akun dengan status apapun
+
+![Dashboard](https://firebasestorage.googleapis.com/v0/b/itsmejoule.appspot.com/o/sekawan%2FDashboard%20-%20Laravel.png?alt=media&token=09dfd412-9628-4c2c-9640-c5342c68bd51)
+
+Di menu ini admin atau pun atasan dapat melihat grafik pemakaian kendaraan setiap minggunya.
+
+13. Di setiap menu juga terdapat statustotal user, total kendaraan, total driver, dan total penggunaan bahan bakar.
+
+![Stats](https://firebasestorage.googleapis.com/v0/b/itsmejoule.appspot.com/o/sekawan%2Fstats.png?alt=media&token=9b194990-5d25-4822-a0f7-0fa0fb647753)
+
+14. Di menu vehicle, admin atau pun atasan dapat melihat list semua kendaraan yang beroperasi
+
+![Vehicle](https://firebasestorage.googleapis.com/v0/b/itsmejoule.appspot.com/o/sekawan%2FVehicles%20-%20Laravel.png?alt=media&token=0e79c853-77f4-4ab2-a2ae-9f679e2f0b78)
